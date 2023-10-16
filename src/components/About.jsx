@@ -27,7 +27,7 @@ const About = () => {
                     </motion.div>
                     <div></div>
                     </div>
-                <motion.div className="max-w-[1000px] w-full grid grid-cols-2 gap-8 px-4"
+                <motion.div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4"
                     ref={ref}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}
@@ -38,7 +38,7 @@ const About = () => {
                         <p className='sm:text-right text-4xl font-bold'>Olá, meu nome é Lucca, é um prazer te-lo aqui.</p>
                     </div>
                 <div>
-                    <p>{Frases[1]}</p>
+                    <p className='text-[#7ec7c9]'>{Frases[1]}</p>
                 </div>
                 </motion.div>
             </div>

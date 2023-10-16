@@ -15,7 +15,7 @@ const Home = () => {
             <motion.div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full" 
                 initial={{ opacity: 0, translateY: 50 }}
                 animate={{ opacity: 1, translateY: 0 }}
-                transition={{ duration: 1.5, delay: 0.25}}
+                transition={{ duration: 0.5, delay: 1}}
                 >
                 <p className="text-[#F4AE3F] font-semibold">Bem-Vindo ao site de</p>
                 <h1 className="text-4xl sm:text-7xl font-bold text-[#F0E6D7]">Lucca Seidler</h1>

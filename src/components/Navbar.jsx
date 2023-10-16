@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'
-import { FaBars, FaTimes, FaFreebsd, FaGithub, FaLinkedin} from 'react-icons/fa'
+import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi';
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import { SiLitecoin } from 'react-icons/si'
@@ -18,7 +18,7 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav);
 
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#28696A] text-[#F0E6D7]'>
+        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#28696A] text-[#F0E6D7] z-10'>
             <motion.div
             initial={{ opacity: 0, translateY: -50 }}
             animate={{ opacity: 1, translateY: 0 }}
