@@ -9,16 +9,33 @@ import CSS from '../assets/images/css.png';
 import javascript from '../assets/images/javascript.png';
 import reactjs from '../assets/images/reactjs.png'; 
 import typescript from '../assets/images/typescript.png';
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 
 const TimeLine = () => {
     const workIconStyles = {background: "#06D6A0"}
     const schoolIconStyles = {background: "#f9c74f"}
+
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    })
+
+    const animationTime = {
+        hidden: { opacity: 0, y: 100},
+        visible: { opacity: 1, y: 0}
+    }
     
     return (
         <div name="skills" className='bg-[#28696A]'>
             {/* Container */}
-            <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+            <motion.div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'
+                ref={ref}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={animationTime}
+                transition={{ duration: 1.5 }}
+            >
                 <div>
                     <p className='text-4xl text-[#F0E6D7] font-bold inline border-b-4 border-[#F4AE3F]'>Linha do tempo</p>
                     <p className='mt-4 text-xl text-[#7ec7c9]'>Conheça a minha trajetória na programação até chegar aqui...</p>
@@ -46,7 +63,7 @@ const TimeLine = () => {
                         }
                     </VerticalTimeline>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 };
