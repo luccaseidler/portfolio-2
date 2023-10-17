@@ -4,11 +4,6 @@ import { ReactComponent as SchoolIcon } from '../school.svg';
 import timelineElements from '../timelineElements';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
-import HTML from '../assets/images/html.png';
-import CSS from '../assets/images/css.png';
-import javascript from '../assets/images/javascript.png';
-import reactjs from '../assets/images/reactjs.png'; 
-import typescript from '../assets/images/typescript.png';
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
