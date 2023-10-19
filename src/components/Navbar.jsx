@@ -4,6 +4,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi';
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import { SiLitecoin } from 'react-icons/si'
+import duck from '../assets/images/ducklogo.svg'
 
 /* Styles */
 const navButtons = 'transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 hover:text-[#F4AE3F]';
@@ -24,10 +25,7 @@ const Navbar = () => {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 1.5, delay: 0.25}}
             >
-                <SiLitecoin class="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..." 
-                size={40}
-                color= '#F4AE3F'
-                />
+                <img src={duck} class="ml-4 w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..."/>
             </motion.div>
                 {/* menu */}
                 <motion.ul className='hidden md:flex'
