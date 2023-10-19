@@ -54,8 +54,8 @@ const Navbar = () => {
             </motion.div>
 
             {/*Mobile*/}
-            <ul className={`transition-transform ${!nav ? 'translate-y-[100%]' : 'translate-y-0'} absolute top-0 left-0 w-full h-screen bg-[#28696A] flex flex-col justify-center items-center`}>
-            <SiLitecoin class="transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..." 
+            <ul className={`transition-transform duration-500 ${!nav ? 'translate-y-[100%]' : 'translate-y-0'} absolute top-0 left-0 w-full h-screen bg-[#28696A] flex flex-col justify-center items-center`}>
+            <img src={duck} class="w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..." 
                 size={50}
                 onMouseOver={({target})=>target.style.color="#F4AE3F"}
                 onMouseOut={({target})=>target.style.color="#F0E6D7"}
