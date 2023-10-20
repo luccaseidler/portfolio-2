@@ -46,12 +46,6 @@ const techs = [
         image: typescript
     },
     {
-        id:5,
-        title: 'Redux',
-        alt: 'Redux Icon',
-        image: redux
-    },
-    {
         id:6,
         title: 'Git',
         alt: 'Git Icon',
@@ -102,7 +96,7 @@ const Skills = () => {
                     <p className='py-4'>Linguagens e tecnologias que trabalhei previamente</p>
                 </motion.div>
             </div>
-            <div className='w-full grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8 overflow-hidden'>
+            <div className='w-full grid grid-cols-3 sm:grid-cols-5 gap-3 text-center py-8 overflow-hidden'>
             {techs.map((tech, i) => (
                 <motion.div 
                     key={tech.id}
@@ -110,8 +104,8 @@ const Skills = () => {
                     variants={animationSkills}
                     transition={{ duration: 0.5, delay: i * 0.3 }}
                 >
-                    <div className='hover:scale-110 duration-300'>
-                        <img className='w-20 mx-auto' src={tech.image} alt={tech.alt}/>
+                    <div className='hover:scale-110 hover:font-bold duration-300'>
+                        <img className='sm:w-20 w-16 mx-auto' src={tech.image} alt={tech.alt}/>
                         <p className='my-4'>{tech.title}</p>
                     </div>
                 </motion.div>

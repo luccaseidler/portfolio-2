@@ -9,8 +9,8 @@ import { useInView } from 'react-intersection-observer'
 
 
 const TimeLine = () => {
-    const workIconStyles = {background: "#06D6A0"}
-    const schoolIconStyles = {background: "#f9c74f"}
+    const workIconStyles = {background: "#7ec7c9"}
+    const schoolIconStyles = {background: "#F4AE3F"}
 
     const [ref, inView] = useInView({
         triggerOnce: true,

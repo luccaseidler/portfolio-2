@@ -7,7 +7,7 @@ import { SiLitecoin } from 'react-icons/si'
 import duck from '../assets/images/ducklogo.svg'
 
 /* Styles */
-const navButtons = 'transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 hover:text-[#F4AE3F]';
+const navButtons = 'font-bold transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 hover:text-[#F4AE3F]';
 const mobileNav = 'py-6 text-4xl transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 hover:text-[#F4AE3F]';
 const socialLi = 'w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300';
 const socialA = 'flex justify-between items-center w-full text-[#F4AE3F] font-semibold';
@@ -34,9 +34,9 @@ const Navbar = () => {
                     transition={{ duration: 1.5, delay: 0.25}}
                 >
                     <li className={navButtons}>Home</li>
+                    <li className={navButtons}>Sobre</li>
+                    <li className={navButtons}>Linha do Tempo</li>
                     <li className={navButtons}>Skills</li>
-                    <li className={navButtons}>Experience</li>
-                    <li className={navButtons}>Contact</li>
                 </motion.ul>
 
             <motion.div onClick={handleClick} className='md:hidden z-10'
@@ -61,9 +61,9 @@ const Navbar = () => {
                 onMouseOut={({target})=>target.style.color="#F0E6D7"}
                 />
                 <li className={mobileNav}>Home</li>
+                <li className={mobileNav}>Sobre</li>
+                <li className={mobileNav}>Linha do Tempo</li>
                 <li className={mobileNav}>Skills</li>
-                <li className={mobileNav}>Experience</li>
-                <li className={mobileNav}>Contact</li>
             </ul>
 
             {/* Social Icons */}
