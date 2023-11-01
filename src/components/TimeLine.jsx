@@ -22,7 +22,7 @@ const TimeLine = () => {
     }
     
     return (
-        <div name="skills" className='bg-[#28696A]'>
+        <div  className='bg-gradient-to-r from-[#28696A] to-[#2b888b]'>
             {/* Container */}
             <motion.div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'
                 ref={ref}

@@ -3,8 +3,6 @@ import CSS from '../assets/images/css2.svg';
 import javascript from '../assets/images/javascript2.svg';
 import reactjs from '../assets/images/react3.svg'; 
 import typescript from '../assets/images/typescript2.svg';
-import redux from '../assets/images/redux2.svg';
-import three from '../assets/images/threejs.svg';
 import git from '../assets/images/git2.svg';
 import tailwind from '../assets/images/tailwind2.svg';
 import nextjs from '../assets/images/nextjs.svg'
@@ -83,7 +81,7 @@ const Skills = () => {
     }
 
     return (
-        <div className=' bg-[#28696A] text-[#F0E6D7]'>
+        <div name='' className=' bg-gradient-to-r from-[#28696A] to-[#2b888b] text-[#F0E6D7] py-4'>
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <motion.div
                 ref={ref}
@@ -97,19 +95,19 @@ const Skills = () => {
                 </motion.div>
             </div>
             <div className='w-full grid grid-cols-3 sm:grid-cols-5 gap-3 text-center py-8 overflow-hidden'>
-            {techs.map((tech, i) => (
-                <motion.div 
-                    key={tech.id}
-                    animate={inView ? 'visible' : 'hidden'}
-                    variants={animationSkills}
-                    transition={{ duration: 0.5, delay: i * 0.3 }}
-                >
-                    <div className='hover:scale-110 hover:font-bold duration-300'>
-                        <img className='sm:w-20 w-16 mx-auto' src={tech.image} alt={tech.alt}/>
-                        <p className='my-4'>{tech.title}</p>
-                    </div>
-                </motion.div>
-            ))}
+                {techs.map((tech, i) => (
+                    <motion.div 
+                        key={tech.id}
+                        animate={inView ? 'visible' : 'hidden'}
+                        variants={animationSkills}
+                        transition={{ duration: 0.5, delay: i * 0.3 }}
+                    >
+                        <div className='hover:scale-110 hover:font-bold duration-300'>
+                            <img className='sm:w-20 w-16 mx-auto' src={tech.image} alt={tech.alt}/>
+                            <p className='my-4'>{tech.title}</p>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
         </div>
     )

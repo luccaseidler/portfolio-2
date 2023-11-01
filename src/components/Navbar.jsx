@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi';
 import {BsFillPersonLinesFill} from 'react-icons/bs'
-import { SiLitecoin } from 'react-icons/si'
 import duck from '../assets/images/ducklogo.svg'
 
 /* Styles */
@@ -19,13 +18,13 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav);
 
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#28696A] text-[#F0E6D7] z-10'>
+        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-gradient-to-r from-[#28696A] to-[#2b888b] text-[#F0E6D7] z-10'>
             <motion.div
             initial={{ opacity: 0, translateY: -50 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 1.5, delay: 0.25}}
             >
-                <img src={duck} class="ml-4 w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..."/>
+                <img src={duck} alt='duck logo' class="ml-4 w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..."/>
             </motion.div>
                 {/* menu */}
                 <motion.ul className='hidden md:flex'
@@ -37,6 +36,7 @@ const Navbar = () => {
                     <li className={navButtons}>Sobre</li>
                     <li className={navButtons}>Linha do Tempo</li>
                     <li className={navButtons}>Skills</li>
+                    <li className={navButtons}>Projetos</li>
                 </motion.ul>
 
             <motion.div onClick={handleClick} className='md:hidden z-10'
@@ -54,8 +54,8 @@ const Navbar = () => {
             </motion.div>
 
             {/*Mobile*/}
-            <ul className={`transition-transform duration-500 ${!nav ? 'translate-y-[100%]' : 'translate-y-0'} absolute top-0 left-0 w-full h-screen bg-[#28696A] flex flex-col justify-center items-center`}>
-            <img src={duck} class="w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..." 
+            <ul className={`transition-transform duration-500 ${!nav ? 'translate-y-[100%]' : 'translate-y-0'} absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-[#28696A] to-[#2b888b] flex flex-col justify-center items-center`}>
+            <img src={duck} alt='duck logo' class="w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..." 
                 size={50}
                 onMouseOver={({target})=>target.style.color="#F4AE3F"}
                 onMouseOut={({target})=>target.style.color="#F0E6D7"}
@@ -64,6 +64,7 @@ const Navbar = () => {
                 <li className={mobileNav}>Sobre</li>
                 <li className={mobileNav}>Linha do Tempo</li>
                 <li className={mobileNav}>Skills</li>
+                <li className={mobileNav}>Projetos</li>
             </ul>
 
             {/* Social Icons */}
