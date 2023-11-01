@@ -14,7 +14,7 @@ const Contact = () => {
     }
 
     return (
-        <div name='contact' className='w-full h-screen bg-gradient-to-r from-[#28696A] to-[#2b888b] flex justify-center items-center p-4'>
+        <div id='contact' className='w-full h-screen bg-gradient-to-r from-[#28696A] to-[#2b888b] flex justify-center items-center p-4'>
             <motion.form 
             ref={ref}
             initial="hidden"

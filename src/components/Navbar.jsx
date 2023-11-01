@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi';
@@ -17,8 +17,28 @@ const Navbar = () => {
     const [ nav, setNav] = useState(false);
     const handleClick = () => setNav(!nav);
 
+    const [scrolling, setScrolling] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const hideNav = currentScrollPos > prevScrollPos
+
+            setScrolling(hideNav);
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos])
+    
+
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-gradient-to-r from-[#28696A] to-[#2b888b] text-[#F0E6D7] z-10'>
+        <div className={`fixed w-full h-[80px] flex justify-between items-center px-4 bg-gradient-to-r from-[#28696A] to-[#2b888b] text-[#F0E6D7] z-10 transition-opacity duration-300 ${scrolling ? 'opacity-0' : 'opacity-100'}`}>
             <motion.div
             initial={{ opacity: 0, translateY: -50 }}
             animate={{ opacity: 1, translateY: 0 }}
@@ -32,11 +52,60 @@ const Navbar = () => {
                     animate={{ opacity: 1, translateY: 0 }}
                     transition={{ duration: 1.5, delay: 0.25}}
                 >
-                    <li className={navButtons}>Home</li>
-                    <li className={navButtons}>Sobre</li>
-                    <li className={navButtons}>Linha do Tempo</li>
-                    <li className={navButtons}>Skills</li>
-                    <li className={navButtons}>Projetos</li>
+                    <li onClick={() => {
+                        const scrollTo = document.getElementById("home")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  className={navButtons}>Home
+                </li>
+                    <li onClick={() => {
+                        const scrollTo = document.getElementById("about")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  className={navButtons}>Sobre
+                </li>
+                    <li onClick={() => {
+                        const scrollTo = document.getElementById("timeline")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  className={navButtons}>Linha do Tempo
+                </li>
+                    <li onClick={() => {
+                        const scrollTo = document.getElementById("skills")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  className={navButtons}>Skills
+                </li>
+                    <li onClick={() => {
+                        const scrollTo = document.getElementById("project")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  className={navButtons}>Projetos
+                </li>
+                    <li onClick={() => {
+                        const scrollTo = document.getElementById("contact")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  className={navButtons}>Contato
+                </li>
                 </motion.ul>
 
             <motion.div onClick={handleClick} className='md:hidden z-10'
@@ -60,11 +129,66 @@ const Navbar = () => {
                 onMouseOver={({target})=>target.style.color="#F4AE3F"}
                 onMouseOut={({target})=>target.style.color="#F0E6D7"}
                 />
-                <li className={mobileNav}>Home</li>
-                <li className={mobileNav}>Sobre</li>
-                <li className={mobileNav}>Linha do Tempo</li>
-                <li className={mobileNav}>Skills</li>
-                <li className={mobileNav}>Projetos</li>
+                <li onClick={() => {
+                        const scrollTo = document.getElementById("home")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                            handleClick();
+                        }
+                    }}  className={mobileNav}>Home
+                </li>
+                <li onClick={() => {
+                        const scrollTo = document.getElementById("about")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                            handleClick();
+                        }
+                    }}  className={mobileNav}>Sobre
+                </li>
+                <li onClick={() => {
+                        const scrollTo = document.getElementById("timeline")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                            handleClick();
+                        }
+                    }}  className={mobileNav}>Linha do Tempo
+                </li>
+                <li onClick={() => {
+                        const scrollTo = document.getElementById("skills")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                            handleClick();
+                        }
+                    }}  className={mobileNav}>Skills
+                </li>
+                <li onClick={() => {
+                        const scrollTo = document.getElementById("project")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                            handleClick();
+                        }
+                    }}  className={mobileNav}>Projetos
+                </li>
+                <li onClick={() => {
+                        const scrollTo = document.getElementById("contact")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                            handleClick();
+                        }
+                    }}  className={mobileNav}>Contato
+                </li>       
             </ul>
 
             {/* Social Icons */}

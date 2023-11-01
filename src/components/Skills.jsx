@@ -81,7 +81,7 @@ const Skills = () => {
     }
 
     return (
-        <div name='' className=' bg-gradient-to-r from-[#28696A] to-[#2b888b] text-[#F0E6D7] py-4'>
+        <div id='skills' className=' bg-gradient-to-r from-[#28696A] to-[#2b888b] text-[#F0E6D7] py-[240px]'>
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <motion.div
                 ref={ref}

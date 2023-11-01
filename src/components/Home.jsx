@@ -12,7 +12,7 @@ const buttonCV = "sm:hidden text-center transition ease-in-out font-bold rounded
 
 const Home = () => {
     return (
-        <div name='home' className="w-full h-screen bg-gradient-to-r from-[#28696A] to-[#2b888b]">
+        <div id='home' className="w-full h-screen bg-gradient-to-r from-[#28696A] to-[#2b888b]">
             {/*Container*/}
             <motion.div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full" 
                 initial={{ opacity: 0, translateY: 50 }}
