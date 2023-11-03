@@ -53,7 +53,15 @@ const Home = () => {
                 >{Frases[0]}
                 </motion.p>
                 <div className="flex gap-4">
-                    <motion.button 
+                    <motion.button
+                        onClick={() => {
+                            const scrollTo = document.getElementById("about")
+                            if (scrollTo) {
+                                scrollTo.scrollIntoView({
+                                    behavior: "smooth",
+                                });
+                            }
+                        }}  
                         className={buttonAbout}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -63,16 +71,18 @@ const Home = () => {
                         <HiArrowNarrowRight className="ml-2 "/>
                     </span>
                     </motion.button>
-                    <motion.button 
-                        className={buttonCV}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 2.5}}
-                    >Baixar CV 
-                    <span className="">
-                        <HiDownload className="ml-2"/>
-                    </span>
-                    </motion.button>
+                    <a href="https://drive.google.com/file/d/1YFF2aTUutzGpLsEm8eZKO4aFijFPGwXR/view?usp=sharing" target='_blank' rel='noopener noreferrer'>
+                        <motion.button
+                            className={buttonCV}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 2.5}}
+                        >Baixar CV 
+                        <span className="">
+                            <HiDownload className="ml-2"/>
+                        </span>
+                        </motion.button>
+                    </a>
                 </div>
                 <motion.div 
                     className="sm:hidden flex gap-4 py-4"
@@ -80,8 +90,12 @@ const Home = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 3}}  
                 >
-                    <FaGithub className="hover:scale-110 duration-300" size={20} color= '#F4AE3F' />
-                    <FaLinkedin className="hover:scale-110 duration-300" size={20} color= '#F4AE3F' />
+                    <a href='https://github.com/luccaseidler' target='_blank' rel='noopener noreferrer'>
+                        <FaGithub className="hover:scale-110 duration-300" size={20} color= '#F4AE3F' />
+                    </a>
+                    <a href='https://www.linkedin.com/in/lucca-seidler-3a2887229/' target='_blank' rel='noopener noreferrer'>
+                        <FaLinkedin className="hover:scale-110 duration-300" size={20} color= '#F4AE3F' />
+                    </a>    
                 </motion.div>
             </motion.div>
         </div>

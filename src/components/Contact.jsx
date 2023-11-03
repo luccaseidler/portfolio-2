@@ -32,6 +32,11 @@ const Contact = () => {
                 <button href='/' className='flex justify-center py-2'>
                     <p className='text-center transition ease-in-out font-bold rounded-full group text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white'>Let's Work</p>
                 </button>
+                <div className='py-6 flex justify-center '>ou
+                    <a href='https://github.com/luccaseidler/' target='_blank' rel='noopener noreferrer' className='transition ease-in-out font-bold rounded-full text-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:scale-125 duration-300'>
+                        Ver Todos 
+                    </a>
+                </div>
             </motion.form>
         </div>
     )

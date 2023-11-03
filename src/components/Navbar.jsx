@@ -44,7 +44,15 @@ const Navbar = () => {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 1.5, delay: 0.25}}
             >
-                <img src={duck} alt='duck logo' class="ml-4 w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..."/>
+                <img onClick={() => {
+                        const scrollTo = document.getElementById("home")
+                        if (scrollTo) {
+                            scrollTo.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }
+                    }}  
+                     src={duck} alt='duck logo' class="ml-4 w-[45px] transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200 ..."/>
             </motion.div>
                 {/* menu */}
                 <motion.ul className='hidden md:flex'
@@ -200,28 +208,32 @@ const Navbar = () => {
                 <ul>
                     <li className={socialLi}>
                         <a className={socialA}
-                        href='/'
+                        href='https://www.linkedin.com/in/lucca-seidler-3a2887229/'
+                        target='_blank' rel='noopener noreferrer'
                         >
                             Linkedin <FaLinkedin size={30} color= '#F4AE3F' />    
                         </a>
                     </li>
                     <li className={socialLi}>
                         <a className={socialA}
-                        href='/'
+                        href='https://github.com/luccaseidler'
+                        target='_blank' rel='noopener noreferrer'
                         >
                             Github <FaGithub size={30} color= '#F4AE3F' />    
                         </a>
                     </li>
                     <li className={socialLi}>
                         <a className={socialA}
-                        href='/'
+                        href='mailto:luccaseidler2000@gmail.com'
+                        target='_blank' rel='noopener noreferrer'
                         >
                             Email <HiOutlineMail size={30} color= '#F4AE3F' />    
                         </a>
                     </li>
                     <li className={socialLi}>
                         <a className={socialA}
-                        href='/'
+                        href='https://drive.google.com/file/d/1YFF2aTUutzGpLsEm8eZKO4aFijFPGwXR/view?usp=sharing'
+                        target='_blank' rel='noopener noreferrer'
                         >
                             Currículo <BsFillPersonLinesFill size={30} color= '#F4AE3F' />    
                         </a>
