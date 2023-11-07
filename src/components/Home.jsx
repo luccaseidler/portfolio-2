@@ -7,8 +7,8 @@ import Frases from '../assets/textos/textos'
 
 /*Styles*/
 
-const buttonAbout = "text-center transition ease-in-out font-bold rounded-full group text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white"
-const buttonCV = "sm:hidden text-center transition ease-in-out font-bold rounded-full group text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white"
+const buttonAbout = "text-center transition shadow-xl shadow-[#2a4f50] ease-in-out font-bold rounded-full group text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110"
+const buttonCV = "sm:hidden text-center shadow-xl shadow-[#2a4f50] transition ease-in-out font-bold rounded-full group text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110"
 
 const Home = () => {
     return (
@@ -26,7 +26,7 @@ const Home = () => {
                     transition={{ duration: 0.5, delay: 1}}
                 >Bem-Vindo ao site de</motion.p>
                 <motion.h1 
-                    className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#ffb134] to-[#fafafa] sm:text-7xl font-bold text-[#F0E6D7]"
+                    className="text-4xl  text-transparent bg-clip-text bg-gradient-to-r from-[#ffb134] to-[#fafafa] sm:text-7xl font-bold text-[#F0E6D7]"
                     initial={{opacity: 0, translateX: -1000 }}
                     animate={{opacity: 1, translateX: 0 }}
                     transition={{ duration: 0.5, delay: 1.3}}
@@ -71,7 +71,7 @@ const Home = () => {
                         <HiArrowNarrowRight className="ml-2 "/>
                     </span>
                     </motion.button>
-                    <a href="https://drive.google.com/file/d/1YFF2aTUutzGpLsEm8eZKO4aFijFPGwXR/view?usp=sharing" target='_blank' rel='noopener noreferrer'>
+                    <a href="https://drive.google.com/file/d/1myNoJK2waZeMwCB1Ny94zXrwU1P7fzZm/view?usp=sharing" target='_blank' rel='noopener noreferrer'>
                         <motion.button
                             className={buttonCV}
                             initial={{ opacity: 0 }}

@@ -46,7 +46,7 @@ const Projects = () => {
                             <h3 className='text-2xl  track text-center'>Site Institucional</h3>
                             <p className='pb-4 pt-2 text-center'>ReactJS/TailwindCSS/JavaScript</p>
                             <a href='http://atfbank.com' target='_blank' rel='noopener noreferrer' className='flex justify-center'>
-                                <p className='text-center transition ease-in-out font-bold rounded-full group text-[#28696A] w-[136px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white'>Visitar Site</p>
+                                <p className='text-center transition ease-in-out font-bold rounded-full group shadow-xl shadow-[#2a4f50] text-[#28696A] w-[136px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110'>Visitar Site</p>
                             </a>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const Projects = () => {
                             <h3 className='text-2xl  track text-center'>Loja de tênis</h3>
                             <p className='pb-4 pt-2 text-center'>ReactJS/TypeScript/CSS</p>
                             <a href='https://github.com/luccaseidler/shoe-project' target='_blank' rel='noopener noreferrer' className='flex justify-center'>
-                                <p className='text-center transition ease-in-out font-bold rounded-full group text-[#28696A] w-[158px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white'>Ver no GitHub</p>
+                                <p className='text-center transition ease-in-out font-bold rounded-full group shadow-xl shadow-[#2a4f50] text-[#28696A] w-[158px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110'>Ver no GitHub</p>
                             </a>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const Projects = () => {
                             <h3 className='text-2xl  track text-center'>Primeiro Portfólio</h3>
                             <p className='pb-4 pt-2 text-center'>JavaScript/CSS/HTML</p>
                             <a href='https://luccaseidler.github.io/porfolio-seidler/ ' target='_blank' rel='noopener noreferrer' className='flex justify-center'>
-                                <p className='text-center transition ease-in-out font-bold rounded-full group text-[#28696A] w-[158px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white'>Ver no GitHub</p>
+                                <p className='text-center transition ease-in-out font-bold rounded-full group shadow-xl shadow-[#2a4f50] text-[#28696A] w-[158px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110'>Ver no GitHub</p>
                             </a>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ const Projects = () => {
                             <h3 className='text-2xl  track text-center'>Sistema Interno</h3>
                             <p className='pb-4 pt-2 text-center'>PHP/WordPress/CSS/HTML/APIs - não oficial por questões éticas</p>
                             <a href='https://github.com/luccaseidler/plataform' target='_blank' rel='noopener noreferrer' className='flex justify-center'>
-                                <p className='text-center transition ease-in-out font-bold rounded-full group text-[#28696A] w-[158px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white'>Ver no GitHub</p>
+                                <p className='text-center transition ease-in-out font-bold rounded-full group shadow-xl shadow-[#2a4f50] text-[#28696A] w-[158px] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110'>Ver no GitHub</p>
                             </a>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const Projects = () => {
                             <h3 className='text-2xl  track text-center'>Chatbot para WhatsApp</h3>
                             <p className='pb-4 pt-2 text-center'>JavaScript/APIs/Blip</p>
                             <a href='https://api.whatsapp.com/send/?phone=558008885151&text=Olá' target='_blank' rel='noopener noreferrer' className='flex justify-center'>
-                                <p className='text-center transition ease-in-out font-bold rounded-full group w-[152px] text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white'>Conversar <AiOutlineWhatsApp className='ml-1'/></p>
+                                <p className='text-center transition ease-in-out font-bold rounded-full group shadow-xl shadow-[#2a4f50] w-[152px] text-[#28696A] bg-[#F4AE3F] border-2 border-[#F4AE3F] px-6 py-3 my-2 flex items-center hover:bg-transparent hover:text-white hover:border-white hover:scale-110'>Conversar <AiOutlineWhatsApp className='ml-1'/></p>
                             </a>
                         </div>
                     </div>
