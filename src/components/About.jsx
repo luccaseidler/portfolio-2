@@ -35,7 +35,7 @@ const About = () => {
                     transition={{ duration: 1.5 }}
                 >
                     <div>
-                        <p className='sm:text-right text-4xl font-bold'>Olá, meu nome é Lucca, é um prazer te-lo aqui.</p>
+                        <p className='sm:text-right text-4xl font-bold'>Olá, meu nome é Lucca, é um prazer tê-lo aqui.</p>
                     </div>
                 <div>
                     <p className='text-[#7ec7c9]'>{Frases[1]}</p>
